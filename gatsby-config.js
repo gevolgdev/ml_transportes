@@ -6,5 +6,16 @@ module.exports = {
     title: ` `,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-postcss"]
+  plugins: [
+    "gatsby-plugin-postcss",
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rules: {
+          include: /assets/
+        }
+      }
+    }
+]
 };
